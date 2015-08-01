@@ -1,0 +1,6 @@
+framework module RPServiceLayer {
+  umbrella header "RPServiceLayer-umbrella.h"
+
+  export *
+  module * { export * }
+}
