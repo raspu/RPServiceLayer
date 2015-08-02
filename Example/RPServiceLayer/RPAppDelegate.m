@@ -7,12 +7,25 @@
 //
 
 #import "RPAppDelegate.h"
+#import "RPViewController.h"
+
+@interface RPAppDelegate ()
+@property (nonatomic) RPViewController *rpvc;
+@end
 
 @implementation RPAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+   
+    UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window = window;
+
+    self.rpvc = [[RPViewController alloc] init];
+    self.window.rootViewController = self.rpvc;
+    
+    [window makeKeyAndVisible];
+    
     return YES;
 }
 

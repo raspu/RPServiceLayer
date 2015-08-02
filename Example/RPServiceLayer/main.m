@@ -8,10 +8,11 @@
 
 @import UIKit;
 #import "RPAppDelegate.h"
+#import <RPServiceLayer/RPServiceLayer.h>
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([RPAppDelegate class]));
+        return UIApplicationMain(argc, argv, NSStringFromClass([RPServiceLayer class]), NSStringFromClass([RPAppDelegate class]));
     }
 }

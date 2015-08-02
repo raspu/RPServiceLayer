@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/RPServiceLayer.svg?style=flat)](http://cocoapods.org/pods/RPServiceLayer)
 [![Platform](https://img.shields.io/cocoapods/p/RPServiceLayer.svg?style=flat)](http://cocoapods.org/pods/RPServiceLayer) -->
 
-Service Layer is a in-app middleware that facilitates the creation of services, and provide infrastructure for in-app communication between completely independent objects.
+Service Layer is an in-app middleware that facilitates the creation of services, and provide infrastructure for in-app communication between completely independent objects.
 
 <!-- ## Usage
 
