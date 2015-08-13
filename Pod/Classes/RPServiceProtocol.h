@@ -36,6 +36,8 @@
  */
 + (BOOL)requiresThreadSafeExecution;
 
+@optional
+
 /**
  *  Only called if requiresThreadSafeExecution returns YES. Should return all selectors that do any kind of write operation on a mutable object.
  *
@@ -49,7 +51,5 @@
  *  @return NSArray of NSStrings with the selector names.
  */
 + (NSArray *)ignoreSelectorStrings;
-
-@optional
 
 @end
