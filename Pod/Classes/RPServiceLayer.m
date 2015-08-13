@@ -12,6 +12,8 @@
 
 @interface RPServiceLayer ()
 @property (nonatomic,strong) RPAppDelegateProxy *delegateProxy;
+@property (nonatomic,strong) NSDictionary *servicesProxies;
+
 @end
 
 @implementation RPServiceLayer

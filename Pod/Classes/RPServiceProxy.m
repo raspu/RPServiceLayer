@@ -44,10 +44,27 @@
     return self;
 }
 
+#pragma mark - Equality
+
+- (BOOL)isEqual:(id)object
+{
+    return self == object; //Same as hash, this is good enough!
+}
+
+- (NSUInteger)hash
+{
+    return (NSUInteger)self; //Just the default implementation, we will only have one instance per service, so this will be fast and reliable.
+}
+
+#pragma mark - Protocols
+
 - (BOOL)conformsToProtocol:(Protocol *)aProtocol
 {
     return [self.service conformsToProtocol:aProtocol];
 }
+
+
+#pragma mark - Messaging
 
 - (id)forwardingTargetForSelector:(SEL)aSelector
 {
