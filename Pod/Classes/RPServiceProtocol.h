@@ -36,6 +36,14 @@
  */
 + (BOOL)requiresThreadSafeExecution;
 
+
+/**
+ *  This should try to start the service, if there 
+ *
+ *  @return YES if the servcie started successfuly
+ */
+- (BOOL)start;
+
 @optional
 
 /**

@@ -7,6 +7,8 @@
 //
 
 #import "RPViewController.h"
+#import <RPServiceLayer/RPServiceLayer.h>
+#import "RPTestService.h"
 
 @interface RPViewController ()
 
@@ -22,7 +24,30 @@
 
 - (void)openURL
 {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"module://test"]];
+    RPServiceLayer *appDelegate = (RPServiceLayer *)[UIApplication sharedApplication];
+    [appDelegate openURL:[NSURL URLWithString:@"srv://test"]];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        for (int i = 0; i<100; i++)
+        {
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+                NSInteger read = [[appDelegate srv:@"test"] testRead];
+                NSLog(@"Read: %i", read);
+            });
+        }
+    });
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        for (int i = 0; i<100; i++)
+        {
+            [[appDelegate srv:@"test"] testWrite:^()
+             {
+                 NSLog(@"Write %i", i);
+             }];
+            
+        }
+    });
+    
 }
 
 - (void)viewDidLoad

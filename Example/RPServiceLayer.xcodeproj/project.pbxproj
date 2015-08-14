@@ -22,6 +22,7 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		9F2115391B7DEC4D0063DD8F /* RPTestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2115381B7DEC4D0063DD8F /* RPTestService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		641993E1761867D1D9E59DAD /* Pods_RPServiceLayer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RPServiceLayer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		789AAECAF8205C47376B17D7 /* Pods-RPServiceLayer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPServiceLayer_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RPServiceLayer_Tests/Pods-RPServiceLayer_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8EDF9C774CC69F73A47E7E8E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		9F2115371B7DEC4D0063DD8F /* RPTestService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPTestService.h; sourceTree = "<group>"; };
+		9F2115381B7DEC4D0063DD8F /* RPTestService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPTestService.m; sourceTree = "<group>"; };
 		A3208FA9743F2DE6EE15D2B8 /* Pods-RPServiceLayer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPServiceLayer_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RPServiceLayer_Example/Pods-RPServiceLayer_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DA75D9D3514934B671D552B6 /* RPServiceLayer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RPServiceLayer.podspec; path = ../RPServiceLayer.podspec; sourceTree = "<group>"; };
 		E3325094510AD82AB3537518 /* Pods-RPServiceLayer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPServiceLayer_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RPServiceLayer_Tests/Pods-RPServiceLayer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +135,8 @@
 				6003F59D195388D20070C39A /* RPAppDelegate.m */,
 				6003F5A5195388D20070C39A /* RPViewController.h */,
 				6003F5A6195388D20070C39A /* RPViewController.m */,
+				9F2115371B7DEC4D0063DD8F /* RPTestService.h */,
+				9F2115381B7DEC4D0063DD8F /* RPTestService.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -387,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* RPAppDelegate.m in Sources */,
+				9F2115391B7DEC4D0063DD8F /* RPTestService.m in Sources */,
 				6003F5A7195388D20070C39A /* RPViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);

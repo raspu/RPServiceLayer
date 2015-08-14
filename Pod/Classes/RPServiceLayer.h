@@ -10,4 +10,6 @@
 
 @interface RPServiceLayer : UIApplication
 
+- (id)srv:(NSString *)service;
+
 @end

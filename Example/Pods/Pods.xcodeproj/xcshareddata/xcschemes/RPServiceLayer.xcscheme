@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "95F0ECE0F1CBFEE94C5074D0"
+               BlueprintIdentifier = "83EBE2AC2FA22D4BBA7BB6EB"
                BuildableName = "RPServiceLayer.framework"
                BlueprintName = "RPServiceLayer"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -19,11 +19,13 @@
 
 - (instancetype)initWithServiceInstance:(id<RPServiceProtocol>)service
 {
+    NSParameterAssert(service);
     Class serviceClass = [service class];
     
     _service = service;
     _threadSafe = [serviceClass requiresThreadSafeExecution];
     _serviceIdentifier = [[serviceClass serviceIdentifier] copy];
+    NSAssert(_serviceIdentifier, @"serviceIdentifier must return a not nil NSString!");
     
     if(_threadSafe)
     {
@@ -42,18 +44,6 @@
     }
     
     return self;
-}
-
-#pragma mark - Equality
-
-- (BOOL)isEqual:(id)object
-{
-    return self == object; //Same as hash, this is good enough!
-}
-
-- (NSUInteger)hash
-{
-    return (NSUInteger)self; //Just the default implementation, we will only have one instance per service, so this will be fast and reliable.
 }
 
 #pragma mark - Protocols
@@ -90,7 +80,8 @@
 
 - (void)forwardInvocation:(NSInvocation *)invocation
 {
-    //Now, if we are... 
+    //Now, if we are...
+    [invocation retainArguments];
     void (^execBlock)() = ^
     {
         [invocation invokeWithTarget:self.service];
@@ -119,8 +110,6 @@
             dispatch_sync(self.dispatchQueue, execBlock);
         }
     }
-    
-    
 }
 
 @end

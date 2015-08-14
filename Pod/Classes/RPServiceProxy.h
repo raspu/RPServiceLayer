@@ -15,7 +15,7 @@
 @property (nonatomic,readonly) BOOL                             threadSafe;
 
 /**
- *  Will init the proxy with the given service, and will configure it to make calls to it thread safe or not, depending of the service. For more information read RPServiceProtocol documentation.
+ *  Will init the proxy with the given service, and will configure it to make calls to it thread safe or not depending of the service. For more information read RPServiceProtocol documentation.
  *
  *  @param service    An object that conforms to RPServiceProtocol.
  *
